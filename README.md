@@ -1,2 +1,2 @@
-# wi-starter-fse
-WI Starter FSE - Starting point for WordPress FSE themes development.
+# WI Starter FSE
+Starting point for WordPress FSE themes development.
