@@ -14,7 +14,7 @@ docker network create proxy
 2. Run proxy service:
 
 ```sh
-docker compose -f "wi-starter-fse/docker-compose.proxy.yaml" up -d --build
+docker compose -f docker-compose.proxy.yaml up -d --build
 ```
 
 ## Install WP & (optionally) theme test data & helper plugins
@@ -22,14 +22,16 @@ docker compose -f "wi-starter-fse/docker-compose.proxy.yaml" up -d --build
 1. Prepare dockers:
 
 ```sh
-docker compose --profile cli -f "wi-starter-fse/docker-compose.yaml" up -d --build
+docker compose --profile cli -f docker-compose.yaml up -d --build
 ```
 
 2. Connect to WP CLI container and run:
 
 ```sh
-wp core install --url="http://${WP_VIRTUAL_HOST}" --title=${WP_VIRTUAL_HOST} --admin_user=${WP_ADMIN_USER} --admin_password=${WP_ADMIN_PASSWORD} --admin_email="${WP_ADMIN_USER}@${WP_VIRTUAL_HOST}" --locale=en_US --skip-email
-wp theme activate wi-starter-fse
+wp core install --url="http://${WP_VIRTUAL_HOST}" --title=${THEME_NAME} --admin_user=${WP_ADMIN_USER} --admin_password=${WP_ADMIN_PASSWORD} --admin_email="${WP_ADMIN_USER}@${WP_VIRTUAL_HOST}" --locale=${WP_LOCALE} --skip-email
+wp theme activate ${THEME_SLUG}
+wp plugin delete akismet hello
+wp theme delete twentytwentytwo twentytwentythree
 ```
 
 3. [Optional] Import test data:

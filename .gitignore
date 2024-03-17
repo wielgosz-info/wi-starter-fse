@@ -132,11 +132,11 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 # Extra WP theme development ignores
-/upgrade
-/uploads
+/wp-content/upgrade
+/wp-content/uploads
 
-/plugins/wordpress-importer
-/plugins/query-monitor
-/plugins/wp-mail-logging
+/wp-content/plugins/wordpress-importer
+/wp-content/plugins/query-monitor
+/wp-content/plugins/wp-mail-logging
 
-/themes/twentytwenty*
+/wp-content/themes/twentytwenty*
