@@ -21,10 +21,10 @@ services:
     volumes: &volumes
       - wordpress_data:/var/www/html
       - ./custom.ini:/usr/local/etc/php/conf.d/custom.ini
-      - ./themes:/var/www/html/wp-content/themes/
-      - ./plugins:/var/www/html/wp-content/plugins/
-      - ./uploads:/var/www/html/wp-content/uploads/
-      - ./upgrade:/var/www/html/wp-content/upgrade/
+      - ./wp-content/themes:/var/www/html/wp-content/themes/
+      - ./wp-content/plugins:/var/www/html/wp-content/plugins/
+      - ./wp-content/uploads:/var/www/html/wp-content/uploads/
+      - ./wp-content/upgrade:/var/www/html/wp-content/upgrade/
     restart: always
     environment:
       VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
