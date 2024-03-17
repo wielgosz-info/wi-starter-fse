@@ -21,7 +21,8 @@
 				"%",
 				"vw",
 				"vh"
-			]
+			],
+			"customSpacingSize": false
 		},
 		"typography": {},
 		"useRootPaddingAwareAlignments": false,
