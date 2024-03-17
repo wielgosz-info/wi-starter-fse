@@ -24,13 +24,19 @@
 			],
 			"customSpacingSize": false
 		},
+		"useRootPaddingAwareAlignments": true,
 		"typography": {},
-		"useRootPaddingAwareAlignments": false,
 		"blocks": {}
 	},
 	"styles": {
 		"spacing": {
-			"blockGap": "0rem"
+			"blockGap": "0rem",
+			"padding": {
+				"top": "0",
+				"bottom": "0",
+				"left": "0.5rem",
+				"right": "0.5rem"
+			}
 		}
 	},
 	"customTemplates": [],

@@ -43,8 +43,10 @@ services:
         ini_set('display_errors', 'On');
         ini_set('error_reporting', E_ALL );
     networks:
-      - proxy
-      - default
+      proxy: {}
+      default:
+        aliases:
+          - ${WP_VIRTUAL_HOST}
 
   cli:
     # WP CLI + Composer
@@ -92,8 +94,6 @@ services:
       THEME_SLUG: ${THEME_SLUG:-wi-starter-fse}
     secrets:
       - user_ssh_key
-    networks:
-      - proxy
 
 volumes:
   db_data: {}

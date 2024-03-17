@@ -6,8 +6,8 @@
  * Block Types: core/post-content
  */
 ?>
-<!-- wp:group {"tagName":"article","layout":{"type":"constrained"},"metadata":{"name":"Article"}} -->
-<article class="wp-block-group">
+<!-- wp:group {"tagName":"article","align":"wide","layout":{"type":"constrained"},"metadata":{"name":"Article"}} -->
+<article class="wp-block-group alignwide">
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
         <!-- wp:post-title {"level":1} /-->
@@ -23,7 +23,7 @@
     </div>
     <!-- /wp:group -->
 
-    <!-- wp:post-featured-image /-->
+    <!-- wp:post-featured-image {"align":"full"} /-->
 
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
