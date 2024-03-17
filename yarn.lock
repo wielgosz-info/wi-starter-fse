@@ -117,6 +117,11 @@
   resolved "https://registry.yarnpkg.com/@esbuild/win32-x64/-/win32-x64-0.19.12.tgz#c57c8afbb4054a3ab8317591a0b7320360b444ae"
   integrity sha512-T1QyPSDCyMXaO3pzBkF96E8xMkiRYbUEZADd29SyPGabqxMViNoii+NcK7eWJAEoU6RZyEm5lVSIjTmcdoB9HA==
 
+"@kucrut/vite-for-wp@^0.8.0":
+  version "0.8.0"
+  resolved "https://registry.yarnpkg.com/@kucrut/vite-for-wp/-/vite-for-wp-0.8.0.tgz#2dfccd0ceef6d1b6087958e4ed26dae452b59a5a"
+  integrity sha512-5VVjELIjV5AI36MMFfAYdsGToY4fdCNtiZr15AWYK+1zRsFG5NXJia6qv9fCrMczhhpXS3hY9dT8tiE+yJL1Ug==
+
 "@rollup/rollup-android-arm-eabi@4.13.0":
   version "4.13.0"
   resolved "https://registry.yarnpkg.com/@rollup/rollup-android-arm-eabi/-/rollup-android-arm-eabi-4.13.0.tgz#b98786c1304b4ff8db3a873180b778649b5dff2b"

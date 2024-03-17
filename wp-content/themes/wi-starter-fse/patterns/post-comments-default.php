@@ -1,6 +1,6 @@
 <?php
 /**
- * Title: Default Post
+ * Title: Default Post Comments
  * Slug: wi-starter-fse/post-comments-default
  * Categories: posts
  */

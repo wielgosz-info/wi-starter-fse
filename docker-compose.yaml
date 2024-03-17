@@ -46,10 +46,14 @@ services:
       - proxy
       - default
 
-  wp_cli:
+  cli:
+    # WP CLI + Composer
     depends_on:
       - wordpress
-    image: wordpress:cli
+    image: ${THEME_SLUG:-wi-starter-fse}-cli:latest
+    build:
+      context: .
+      dockerfile: Dockerfile.cli
     command: ['/bin/sh', '-c', "while true; do sleep 1000; done"]
     volumes: *volumes
     environment:
@@ -73,7 +77,7 @@ services:
   theme:
     depends_on:
       - wordpress
-    image: ${THEME_SLUG:-wi-starter-fse}:latest
+    image: ${THEME_SLUG:-wi-starter-fse}-theme:latest
     build:
       context: .
       dockerfile: Dockerfile.theme

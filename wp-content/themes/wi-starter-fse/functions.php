@@ -1,17 +1,7 @@
 <?php
 
-add_filter( 'default_wp_template_part_areas', 'wi_starter_fse_template_part_areas' );
+// Load Composer dependencies.
+require_once __DIR__ . '/vendor/autoload.php';
 
-function wi_starter_fse_template_part_areas( array $areas ) {
-	$areas[] = array(
-		'area'        => 'loop',
-		'area_tag'    => 'section',
-		'label'       => __( 'Loop', 'wi-starter-fse' ),
-		'description' => __( 'Posts loop section', 'wi-starter-fse' ),
-		'icon'        => 'layout'
-	);
-
-	return $areas;
-}
-
-add_filter( 'should_load_remote_block_patterns', '__return_false' );
+// Load the theme settings.
+new \WI\StarterFSE\Theme();

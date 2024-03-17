@@ -140,3 +140,5 @@ dist
 /wp-content/plugins/wp-mail-logging
 
 /wp-content/themes/twentytwenty*
+
+/wp-content/themes/wi-starter-fse/vendor
