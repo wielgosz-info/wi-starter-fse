@@ -1,0 +1,16 @@
+FROM node:alpine
+
+RUN apk add --no-cache bash git openssh-client
+RUN mkdir -p /root/.ssh
+RUN ln -s /run/secrets/user_ssh_key /root/.ssh/id_rsa
+
+# Override the node entrypoint
+COPY ./docker-entrypoint.theme.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+
+WORKDIR /usr/local/app
+
+EXPOSE 3000
+VOLUME [ "/usr/local/app", "/usr/local/app/node_modules" ]
+
+CMD [ "/bin/sh", "-c", "while true; do sleep 1000; done" ]

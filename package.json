@@ -1,0 +1,9 @@
+{
+  "name": "wi-starter-fse",
+  "version": "1.0.0",
+  "author": "Urszula Wielgosz",
+  "description": "wi-starter-fse",
+  "devDependencies": {
+    "vite": "^5.1.6"
+  }
+}
