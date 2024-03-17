@@ -1,0 +1,82 @@
+version: '3.9'
+
+services:
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_password}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-wordpress}
+      MYSQL_USER: ${MYSQL_USER:-wordpress}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
+
+  wordpress:
+    depends_on:
+      - db
+    image: wordpress:php8.2
+    ports:
+      - ':80'
+    volumes: &volumes
+      - wordpress_data:/var/www/html
+      - ./custom.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ./themes:/var/www/html/wp-content/themes/
+      - ./plugins:/var/www/html/wp-content/plugins/
+      - ./uploads:/var/www/html/wp-content/uploads/
+      - ./upgrade:/var/www/html/wp-content/upgrade/
+    restart: always
+    environment:
+      VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE:-wordpress}
+      WORDPRESS_TABLE_PREFIX: ${WP_TABLE_PREFIX:-wp_}
+      WORDPRESS_DEBUG: 1
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_SITEURL', 'http://${WP_VIRTUAL_HOST}');
+        define('WP_HOME', 'http://${WP_VIRTUAL_HOST}');
+
+        define('WP_DEBUG_DISPLAY' , true);
+        define('DISALLOW_FILE_EDIT', true);
+        ini_set('display_errors', 'On');
+        ini_set('error_reporting', E_ALL );
+    networks:
+      - proxy
+      - default
+
+  wp_cli:
+    depends_on:
+      - wordpress
+    image: wordpress:cli
+    command: ['/bin/sh', '-c', "while true; do sleep 1000; done"]
+    volumes: *volumes
+    environment:
+      WP_ADMIN_USER: ${WP_ADMIN_USER:-admin}
+      WP_ADMIN_PASSWORD: ${WP_ADMIN_PASSWORD:-admin_password}
+      WP_VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
+      WORDPRESS_DB_NAME: ${MYSQL_DATABASE:-wordpress}
+      WORDPRESS_TABLE_PREFIX: ${WP_TABLE_PREFIX:-wp_}
+      WORDPRESS_CONFIG_EXTRA: |
+        define('WP_SITEURL', 'http://${WP_VIRTUAL_HOST}');
+        define('WP_HOME', 'http://${WP_VIRTUAL_HOST}');
+    profiles:
+      - cli
+
+volumes:
+  db_data: {}
+  wordpress_data: {}
+  node_modules: {}
+  vscode: {}
+
+secrets:
+  user_ssh_key:
+    file: ~/.ssh/id_rsa
+
+networks:
+  proxy:
+    external: true
