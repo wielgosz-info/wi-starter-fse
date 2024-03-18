@@ -3433,6 +3433,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"eslint-scope@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "eslint-scope@npm:8.0.0"
+  dependencies:
+    esrecurse: "npm:^4.3.0"
+    estraverse: "npm:^5.2.0"
+  checksum: 10c0/ba1091ee64dece6fdad3c7c0d25c52c58bec197083379a128627ca5ba2bf70e416948405cb5cbcf64655988103f460cfeb2dc4eeb582170f5e5cb20992a14e19
+  languageName: node
+  linkType: hard
+
 "eslint-visitor-keys@npm:^2.1.0":
   version: 2.1.0
   resolution: "eslint-visitor-keys@npm:2.1.0"
@@ -6635,6 +6645,7 @@ __metadata:
     "@wordpress/prettier-config": "npm:^3.10.0"
     "@wordpress/stylelint-config": "npm:^21.36.0"
     eslint: "npm:^8.57.0"
+    eslint-scope: "npm:^8.0.0"
     prettier: "npm:^3.2.5"
     stylelint: "npm:^14.5.1"
     typescript: "npm:^5.4.2"
