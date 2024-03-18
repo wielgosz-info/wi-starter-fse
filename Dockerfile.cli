@@ -1,3 +1,9 @@
 FROM wordpress:cli
 
 COPY --from=composer /usr/bin/composer /usr/local/bin/composer
+
+# Override the WP CLI entrypoint
+USER root
+COPY ./docker-entrypoint.cli.sh /usr/local/bin/docker-entrypoint.sh
+RUN chmod +x /usr/local/bin/docker-entrypoint.sh
+USER www-data

@@ -2982,7 +2982,56 @@ __metadata:
   languageName: node
   linkType: hard
 
-"es-abstract@npm:^1.22.1, es-abstract@npm:^1.22.3, es-abstract@npm:^1.23.0, es-abstract@npm:^1.23.1":
+"es-abstract@npm:^1.22.1, es-abstract@npm:^1.22.3":
+  version: 1.22.5
+  resolution: "es-abstract@npm:1.22.5"
+  dependencies:
+    array-buffer-byte-length: "npm:^1.0.1"
+    arraybuffer.prototype.slice: "npm:^1.0.3"
+    available-typed-arrays: "npm:^1.0.7"
+    call-bind: "npm:^1.0.7"
+    es-define-property: "npm:^1.0.0"
+    es-errors: "npm:^1.3.0"
+    es-set-tostringtag: "npm:^2.0.3"
+    es-to-primitive: "npm:^1.2.1"
+    function.prototype.name: "npm:^1.1.6"
+    get-intrinsic: "npm:^1.2.4"
+    get-symbol-description: "npm:^1.0.2"
+    globalthis: "npm:^1.0.3"
+    gopd: "npm:^1.0.1"
+    has-property-descriptors: "npm:^1.0.2"
+    has-proto: "npm:^1.0.3"
+    has-symbols: "npm:^1.0.3"
+    hasown: "npm:^2.0.1"
+    internal-slot: "npm:^1.0.7"
+    is-array-buffer: "npm:^3.0.4"
+    is-callable: "npm:^1.2.7"
+    is-negative-zero: "npm:^2.0.3"
+    is-regex: "npm:^1.1.4"
+    is-shared-array-buffer: "npm:^1.0.3"
+    is-string: "npm:^1.0.7"
+    is-typed-array: "npm:^1.1.13"
+    is-weakref: "npm:^1.0.2"
+    object-inspect: "npm:^1.13.1"
+    object-keys: "npm:^1.1.1"
+    object.assign: "npm:^4.1.5"
+    regexp.prototype.flags: "npm:^1.5.2"
+    safe-array-concat: "npm:^1.1.0"
+    safe-regex-test: "npm:^1.0.3"
+    string.prototype.trim: "npm:^1.2.8"
+    string.prototype.trimend: "npm:^1.0.7"
+    string.prototype.trimstart: "npm:^1.0.7"
+    typed-array-buffer: "npm:^1.0.2"
+    typed-array-byte-length: "npm:^1.0.1"
+    typed-array-byte-offset: "npm:^1.0.2"
+    typed-array-length: "npm:^1.0.5"
+    unbox-primitive: "npm:^1.0.2"
+    which-typed-array: "npm:^1.1.14"
+  checksum: 10c0/4bca5a60f0dff6c0a5690d8e51374cfcb8760d5dbbb1069174b4d41461cf4e0c3e0c1993bccbc5aa0799ff078199f1bcde2122b8709e0d17c2beffafff01010a
+  languageName: node
+  linkType: hard
+
+"es-abstract@npm:^1.23.0, es-abstract@npm:^1.23.1":
   version: 1.23.2
   resolution: "es-abstract@npm:1.23.2"
   dependencies:
@@ -5322,7 +5371,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"postcss@npm:^8.4.19":
+"postcss@npm:^8.4.19, postcss@npm:^8.4.27":
   version: 8.4.36
   resolution: "postcss@npm:8.4.36"
   dependencies:
@@ -5330,17 +5379,6 @@ __metadata:
     picocolors: "npm:^1.0.0"
     source-map-js: "npm:^1.1.0"
   checksum: 10c0/e7c834e31d8f4e8dfd0a427df36fdc7bdc58a16e373551618e2c3ac172019eb816b24f1b4709311ebcade8d3ba31b2d75522d28ef45ecbbeb11eb01f265579fb
-  languageName: node
-  linkType: hard
-
-"postcss@npm:^8.4.27":
-  version: 8.4.35
-  resolution: "postcss@npm:8.4.35"
-  dependencies:
-    nanoid: "npm:^3.3.7"
-    picocolors: "npm:^1.0.0"
-    source-map-js: "npm:^1.0.2"
-  checksum: 10c0/e8dd04e48001eb5857abc9475365bf08f4e508ddf9bc0b8525449a95d190f10d025acebc5b56ac2e94b3c7146790e4ae78989bb9633cb7ee20d1cc9b7dc909b2
   languageName: node
   linkType: hard
 
@@ -5679,7 +5717,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"safe-array-concat@npm:^1.1.2":
+"safe-array-concat@npm:^1.1.0, safe-array-concat@npm:^1.1.2":
   version: 1.1.2
   resolution: "safe-array-concat@npm:1.1.2"
   dependencies:
@@ -5852,13 +5890,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"source-map-js@npm:^1.0.2":
-  version: 1.0.2
-  resolution: "source-map-js@npm:1.0.2"
-  checksum: 10c0/32f2dfd1e9b7168f9a9715eb1b4e21905850f3b50cf02cf476e47e4eebe8e6b762b63a64357896aa29b37e24922b4282df0f492e0d2ace572b43d15525976ff8
-  languageName: node
-  linkType: hard
-
 "source-map-js@npm:^1.1.0":
   version: 1.1.0
   resolution: "source-map-js@npm:1.1.0"
@@ -5965,7 +5996,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string.prototype.trim@npm:^1.2.9":
+"string.prototype.trim@npm:^1.2.8, string.prototype.trim@npm:^1.2.9":
   version: 1.2.9
   resolution: "string.prototype.trim@npm:1.2.9"
   dependencies:
@@ -5977,7 +6008,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"string.prototype.trimend@npm:^1.0.8":
+"string.prototype.trimend@npm:^1.0.7, string.prototype.trimend@npm:^1.0.8":
   version: 1.0.8
   resolution: "string.prototype.trimend@npm:1.0.8"
   dependencies:
