@@ -1,7 +1,7 @@
 <?php
 /**
- * Title: Default Post
- * Slug: wi-starter-fse/post-default
+ * Title: Default Page
+ * Slug: wi-starter-fse/page-default
  * Categories: posts
  */
 ?>
@@ -10,20 +10,8 @@
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
         <!-- wp:post-title {"level":1} /-->
-
-        <!-- wp:group {"layout":{"type":"flex","flexWrap":"nowrap"}} -->
-        <div class="wp-block-group">
-			<!-- wp:post-terms {"term":"category"} /-->
-
-            <!-- wp:post-terms {"term":"post_tag"} /-->
-
-            <!-- wp:post-author-name /-->
-        </div>
-        <!-- /wp:group -->
     </div>
     <!-- /wp:group -->
-
-    <!-- wp:post-featured-image {"align":"full"} /-->
 
     <!-- wp:group {"layout":{"type":"constrained"}} -->
     <div class="wp-block-group">
