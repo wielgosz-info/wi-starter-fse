@@ -3,12 +3,19 @@
   "version": "1.0.0",
   "author": "Urszula Wielgosz",
   "description": "wi-starter-fse",
-  "devDependencies": {
-    "@kucrut/vite-for-wp": "^0.8.0",
-    "vite": "^4.4.11"
-  },
   "scripts": {
     "build": "vite build",
     "dev": "vite"
-  }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.0",
+    "@kucrut/vite-for-wp": "^0.8.0",
+    "@wordpress/eslint-plugin": "^17.10.0",
+    "@wordpress/prettier-config": "^3.10.0",
+    "eslint": "^8.57.0",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.2",
+    "vite": "^4.4.11"
+  },
+  "packageManager": "yarn@4.1.1"
 }

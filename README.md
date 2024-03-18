@@ -64,3 +64,4 @@ yarn dev
 - [ ] Move initial WP installation & cleanup step to `docker-entrypoint.cli.sh`.
 - [ ] Settings config in `theme.json`. End client should have only necessary minimum of controls available, but for convenience of patterns/template creation developer should have `settings.appearanceTools: true`.
 - [ ] Figure out if there is a way for VSCode to autocomplete theme CSS vars.
+- [ ] CSS Layers? Check how opinionated are default styles, if there will be override problems, considering a lot of basics should come from `theme.json` (e.g. `a:where(:not(.wp-element-button))` from `#global-styles-inline-css`).
