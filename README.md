@@ -60,7 +60,6 @@ yarn dev
 
 # TODO:
 
-- [ ] Add code style & linter settings.
 - [ ] Move initial WP installation & cleanup step to `docker-entrypoint.cli.sh`.
 - [ ] Settings config in `theme.json`. End client should have only necessary minimum of controls available, but for convenience of patterns/template creation developer should have `settings.appearanceTools: true`.
 - [ ] Figure out if there is a way for VSCode to autocomplete theme CSS vars.
