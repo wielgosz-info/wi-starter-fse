@@ -20,7 +20,10 @@ docker compose -f docker-compose.proxy.yaml up -d --build
 
 ## Install WP & (optionally) theme test data & helper plugins
 
-1. Prepare dockers:
+1. Copy `.env.sample` to `.env` and adjust as needed.
+Pay special attention to `$WP_VIRTUAL_HOST` - it needs to be unique for each project using the above proxy.
+
+2. Prepare dockers:
 
 	```sh
 	docker compose --profile cli -f docker-compose.yaml up -d --build
@@ -29,7 +32,7 @@ docker compose -f docker-compose.proxy.yaml up -d --build
 Next steps require you to be in CLI container shell (in `/var/www/html`).
 The simplest way is via "Attach Shell" VSCode context option 😉.
 
-2. [Optional] Import test data:
+3. [Optional] Import test data:
 
 	```sh
 	wp plugin install wordpress-importer --activate
@@ -38,7 +41,7 @@ The simplest way is via "Attach Shell" VSCode context option 😉.
 	rm /tmp/themeunittestdata.wordpress.xml
 	```
 
-3. [Optional] Install helper plugins. Hint: they are already in `.gitignore`.
+4. [Optional] Install helper plugins. Hint: they are already in `.gitignore`.
 
 	```sh
 	wp plugin install query-monitor --activate
