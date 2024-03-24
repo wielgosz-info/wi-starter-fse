@@ -28,5 +28,14 @@
 			]
 		}
 	},
-	"styles": {}
+	"styles": {
+		"blocks": {
+			"core/calendar": {
+				"color": {
+					"text": "var(--wp--preset--color--contrast)",
+					"background": "var(--wp--preset--color--base)"
+				}
+			}
+		}
+	}
 }
