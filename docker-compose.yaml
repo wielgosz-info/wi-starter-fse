@@ -28,6 +28,7 @@ services:
     restart: always
     environment:
       VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
+      THEME_DEV: ${THEME_DEV:-true}
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
