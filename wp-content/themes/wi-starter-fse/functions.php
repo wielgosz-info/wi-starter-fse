@@ -7,6 +7,11 @@ require_once __DIR__ . '/vendor/autoload.php';
 new \WI\StarterFSE\Assets();
 new \WI\StarterFSE\Theme();
 
-if ( is_admin() ) {
-	new \WI\StarterFSE\Editor();
+// Development helpers.
+if (wp_is_development_mode('theme')) {
+	new \WI\StarterFSE\Dev\GlobalStyles();
+
+	if (is_admin()) {
+		new \WI\StarterFSE\Dev\AppearanceTools();
+	}
 }

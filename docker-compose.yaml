@@ -28,7 +28,6 @@ services:
     restart: always
     environment:
       VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
-      THEME_DEV: ${THEME_DEV:-true}
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
       WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
@@ -40,6 +39,7 @@ services:
         define('WP_HOME', 'http://${WP_VIRTUAL_HOST}');
 
         define('WP_DEBUG_DISPLAY' , true);
+        define('WP_DEVELOPMENT_MODE', '${WP_DEVELOPMENT_MODE}');
         define('DISALLOW_FILE_EDIT', true);
         ini_set('display_errors', 'On');
         ini_set('error_reporting', E_ALL );
