@@ -12,4 +12,4 @@ jobs:
           uses: 10up/wpcs-action@stable
           with:
             paths: wp-content/themes/wi-starter-fse
-						use_local_config: true
+            use_local_config: true
