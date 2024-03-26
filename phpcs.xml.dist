@@ -3,6 +3,8 @@
 
 	<description>WordPress project standards except Missing doc comment rules.</description>
 
+	<file>./wp-content/themes/wi-starter-fse/*</file>
+
 	<rule ref="WordPress">
 		<exclude name="Squiz.Commenting.ClassComment.Missing"/>
 		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>

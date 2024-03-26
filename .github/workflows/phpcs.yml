@@ -11,6 +11,4 @@ jobs:
         - name: WPCS check
           uses: 10up/wpcs-action@stable
           with:
-            standard: 'WordPress'
-            paths: 'wp-content/themes/wi-starter-fse'
             use_local_config: 'true'
