@@ -17,7 +17,7 @@ jobs:
           corepack enable
           yarn set version berry
       - name: Install dependencies
-        run: yarn install --immutable --check-resolutions
+        run: yarn install --immutable --check-cache --check-resolutions
       - name: Build assets
         run: yarn run build
       - name: Archive production artifacts
