@@ -7,9 +7,10 @@ jobs:
       name: WPCS
       runs-on: ubuntu-latest
       steps:
-        - uses: actions/checkout@v3
+        - uses: actions/checkout@v4
         - name: WPCS check
           uses: 10up/wpcs-action@stable
           with:
-            paths: wp-content/themes/wi-starter-fse
+            standard: 'WordPress'
+            paths: 'wp-content/themes/wi-starter-fse'
             use_local_config: 'true'
