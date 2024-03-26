@@ -1,16 +1,14 @@
-name: PHP Code Sniffer
-on: [push]
+name: WPCS check
+
+on: pull_request
+
 jobs:
-  code-sniffer:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: php-actions/composer@v6
-        with:
-          php_version: 8.2
-          working_dir: wp-content/themes/wi-starter-fse
-      - uses: php-actions/phpcs@v1
-        with:
-          php_version: 8.2
-          path: wp-content/themes/wi-starter-fse
-          standard: WordPress
+  phpcs:
+      name: WPCS
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v3
+        - name: WPCS check
+          uses: 10up/wpcs-action@stable
+          with:
+            paths: wp-content/themes/wi-starter-fse
