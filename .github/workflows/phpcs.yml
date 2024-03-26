@@ -11,9 +11,9 @@ jobs:
 
       - name: Composer install
         uses: php-actions/composer@v6
-				with:
-					php_version: 8.2
-					working_dir: wp-content/themes/wi-starter-fse
+	      with:
+	        php_version: 8.2
+	        working_dir: wp-content/themes/wi-starter-fse
 
       - name: PHP Code Sniffer
         uses: php-actions/phpcs@v1
