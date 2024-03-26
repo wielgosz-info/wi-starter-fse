@@ -77,14 +77,7 @@
 			"blockGap": false,
 			"margin": false,
 			"padding": false,
-			"units": [
-				"rem",
-				"px",
-				"em",
-				"%",
-				"vw",
-				"vh"
-			],
+			"units": ["rem", "px", "em", "%", "vw", "vh"],
 			"customSpacingSize": false,
 			"spacingSizes": [],
 			"spacingScale": {
@@ -97,8 +90,8 @@
 		},
 		"typography": {
 			"customFontSize": false,
-			"fontStyle":false,
-			"fontWeight":false,
+			"fontStyle": false,
+			"fontWeight": false,
 			"fluid": {
 				"minFontSize": "0.625rem",
 				"maxViewportWidth": "840px",
@@ -116,7 +109,7 @@
 		},
 		"blocks": {},
 		"custom": {
-			"color":{
+			"color": {
 				"pine-green": "#008b72"
 			}
 		}

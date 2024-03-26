@@ -1,4 +1,9 @@
 <?php
+/**
+ * Entrypoint for theme functions and definitions
+ *
+ * @package WI\StarterFSE
+ */
 
 // Load Composer dependencies.
 require_once __DIR__ . '/vendor/autoload.php';
@@ -8,10 +13,10 @@ new \WI\StarterFSE\Assets();
 new \WI\StarterFSE\Theme();
 
 // Development helpers.
-if (wp_is_development_mode('theme')) {
+if ( wp_is_development_mode( 'theme' ) ) {
 	new \WI\StarterFSE\Dev\GlobalStyles();
 
-	if (is_admin()) {
+	if ( is_admin() ) {
 		new \WI\StarterFSE\Dev\AppearanceTools();
 	}
 }

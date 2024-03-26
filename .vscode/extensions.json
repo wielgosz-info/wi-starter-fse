@@ -14,10 +14,7 @@
 		"editorconfig.editorconfig",
 		"stylelint.vscode-stylelint",
 		"vunguyentuan.vscode-css-variables"
-
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
-	"unwantedRecommendations": [
-
-	]
+	"unwantedRecommendations": []
 }
