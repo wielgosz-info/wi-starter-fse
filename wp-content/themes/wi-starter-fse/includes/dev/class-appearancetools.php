@@ -4,7 +4,7 @@ namespace WI\StarterFSE\Dev;
 
 class AppearanceTools {
 	public function __construct() {
-		add_filter( 'wp_theme_json_data_theme', array( $this, 'enableAllAppearanceTools' ) );
+		add_filter( 'wp_theme_json_data_theme', array( $this, 'enable_all_appearance_tools' ) );
 	}
 
 	/**
@@ -17,62 +17,62 @@ class AppearanceTools {
 	 *
 	 * @return \WP_Theme_JSON_Data
 	 */
-	public function enableAllAppearanceTools( $theme_json ) {
-		$appearance_tools = [
-			"settings" => [
-				"border" => [
-					"color" => true,
-					"radius" => true,
-					"width" => true,
-					"style" => true
-				],
-				"color" => [
-					"background" => true,
-					"text" => true,
-					"heading" => true,
-					"link" => true,
-					"button" => true,
-					"caption" => true,
-				],
-				"background" => [
-					"backgroundImage" => true,
-					"backgroundSize" => true
-				],
-				"dimensions" => [
-					"aspectRatio" => true,
-					"minHeight" => true
-				],
-				"layout" => [
-					"allowEditing" => true,
-					"allowCustomContentAndWideSize" => true
-				],
-				"lightbox" => [
-					"enabled" => true,
-					"allowEditing" => true
-				],
-				"position" => [
-					"sticky" => true
-				],
-				"spacing" => [
-						"blockGap" => true,
-						"margin" => true,
-						"padding" => true,
-						"customSpacingSize" => true,
-					],
-				"typography" => [
-					"customFontSize" => true,
-					"fontStyle" => true,
-					"fontWeight" => true,
-					"letterSpacing" => true,
-					"lineHeight" => true,
-					"textColumns" => true,
-					"textDecoration" => true,
-					"writingMode" => true,
-					"textTransform" => true,
-					"dropCap" => true,
-				]
-			]
-		];
+	public function enable_all_appearance_tools( $theme_json ) {
+		$appearance_tools = array(
+			'settings' => array(
+				'border' => array(
+					'color' => true,
+					'radius' => true,
+					'width' => true,
+					'style' => true
+				),
+				'color' => array(
+					'background' => true,
+					'text' => true,
+					'heading' => true,
+					'link' => true,
+					'button' => true,
+					'caption' => true,
+				),
+				'background' => array(
+					'backgroundImage' => true,
+					'backgroundSize' => true
+				),
+				'dimensions' => array(
+					'aspectRatio' => true,
+					'minHeight' => true
+				),
+				'layout' => array(
+					'allowEditing' => true,
+					'allowCustomContentAndWideSize' => true
+				),
+				'lightbox' => array(
+					'enabled' => true,
+					'allowEditing' => true
+				),
+				'position' => array(
+					'sticky' => true
+				),
+				'spacing' => array(
+					'blockGap' => true,
+					'margin' => true,
+					'padding' => true,
+					'customSpacingSize' => true,
+				),
+				'typography' => array(
+					'customFontSize' => true,
+					'fontStyle' => true,
+					'fontWeight' => true,
+					'letterSpacing' => true,
+					'lineHeight' => true,
+					'textColumns' => true,
+					'textDecoration' => true,
+					'writingMode' => true,
+					'textTransform' => true,
+					'dropCap' => true,
+				)
+			)
+		);
 
 		return $theme_json->update_with( $appearance_tools );
 	}

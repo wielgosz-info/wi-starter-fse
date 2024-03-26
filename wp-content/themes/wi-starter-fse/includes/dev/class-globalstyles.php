@@ -4,7 +4,7 @@ namespace WI\StarterFSE\Dev;
 
 class GlobalStyles {
 	public function __construct() {
-		add_action( 'wp_enqueue_scripts', array( $this, 'exposeGlobalStyles' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'expose_global_styles' ) );
 	}
 
 	/**
@@ -16,7 +16,7 @@ class GlobalStyles {
 	 *
 	 * @return void
 	 */
-	public function exposeGlobalStyles() {
+	public function expose_global_styles() {
 		$stylesheet = wp_get_global_stylesheet();
 		$filename = get_template_directory() . '/global-styles.css';
 

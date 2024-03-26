@@ -10,10 +10,10 @@ class Assets {
 	public function __construct() {
 		$this->dist_dir = get_template_directory() . '/dist';
 
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueAssets' ) );
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_assets' ) );
 	}
 
-	public function enqueueAssets(): void {
+	public function enqueue_assets(): void {
 		Vite\enqueue_asset(
 			$this->dist_dir,
 			'src/scripts/main.ts',
