@@ -1,0 +1,24 @@
+name: Build theme assets
+
+on: pull_request
+
+jobs:
+	build:
+		name: Build theme assets
+		runs-on: ubuntu-latest
+		steps:
+			- uses: actions/checkout@v4
+			- name: Install Node.js
+				uses: actions/setup-node@v2
+				with:
+					node-version: '20'
+					cache: 'yarn'
+			- name: Install dependencies
+				run: yarn install
+			- name: Build assets
+				run: yarn run build
+			- name: Archive production artifacts
+        uses: actions/upload-artifact@v4
+				with:
+					name: theme-assets
+					path: wp-content/themes/wi-starter-theme/dist
