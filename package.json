@@ -1,25 +1,28 @@
 {
-  "name": "wi-starter-fse",
-  "version": "1.0.0",
-  "author": "Urszula Wielgosz",
-  "description": "wi-starter-fse",
-  "scripts": {
-    "build": "vite build",
-    "dev": "vite"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.24.0",
-    "@babel/eslint-parser": "^7.23.10",
-    "@kucrut/vite-for-wp": "^0.8.0",
-    "@wordpress/eslint-plugin": "^17.10.0",
-    "@wordpress/prettier-config": "^3.10.0",
-    "@wordpress/stylelint-config": "^21.36.0",
-    "eslint": "^8.57.0",
-    "eslint-scope": "^8.0.0",
-    "prettier": "^3.2.5",
-    "stylelint": "^14.5.1",
-    "typescript": "^5.4.2",
-    "vite": "^4.4.11"
-  },
-  "packageManager": "yarn@4.1.1"
+	"name": "wi-starter-fse",
+	"version": "1.0.0",
+	"author": "Urszula Wielgosz",
+	"description": "wi-starter-fse",
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite",
+		"prepare": "husky install"
+	},
+	"devDependencies": {
+		"@babel/core": "^7.24.0",
+		"@babel/eslint-parser": "^7.23.10",
+		"@kucrut/vite-for-wp": "^0.8.0",
+		"@wordpress/eslint-plugin": "^17.10.0",
+		"@wordpress/prettier-config": "^3.10.0",
+		"@wordpress/stylelint-config": "^21.36.0",
+		"eslint": "^8.57.0",
+		"eslint-scope": "^8.0.0",
+		"husky": "^8.0.0",
+		"lint-staged": "^15.2.2",
+		"prettier": "^3.2.5",
+		"stylelint": "^14.5.1",
+		"typescript": "^5.4.2",
+		"vite": "^4.4.11"
+	},
+	"packageManager": "yarn@4.1.1"
 }
