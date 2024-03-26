@@ -39,6 +39,8 @@ services:
         define('WP_HOME', 'http://${WP_VIRTUAL_HOST}');
 
         define('WP_DEBUG_DISPLAY' , true);
+        define('WP_DEVELOPMENT_MODE', '${WP_DEVELOPMENT_MODE}');
+				define('WP_ENVIRONMENT_TYPE', '${WP_ENVIRONMENT_TYPE}');
         define('DISALLOW_FILE_EDIT', true);
         ini_set('display_errors', 'On');
         ini_set('error_reporting', E_ALL );

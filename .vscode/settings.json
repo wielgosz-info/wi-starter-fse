@@ -2,5 +2,15 @@
     "php.stubs": [
         "wordpress",
         "*"
-    ]
+    ],
+	"[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+	"cssVariables.lookupFiles": [
+		"src/styles/**/*.css",
+		"wp-content/themes/wi-starter-fse/global-styles.css"
+	  ]
 }
