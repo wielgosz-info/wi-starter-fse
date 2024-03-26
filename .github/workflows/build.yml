@@ -9,12 +9,15 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Install Node.js
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
+      - name: Switch to newest Yarn version
+        run: |
+          corepack enable
+          yarn set version berry
       - name: Install dependencies
-        run: yarn install
+        run: yarn install --frozen-lockfile
       - name: Build assets
         run: yarn run build
       - name: Archive production artifacts
