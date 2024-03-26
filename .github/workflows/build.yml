@@ -12,15 +12,18 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: '20'
-          cache: 'yarn'
       - name: Switch to newest Yarn version
         run: |
           corepack enable
           yarn set version berry
+      - name: Setup Yarn in Node
+        uses: actions/setup-node@v4
+        with:
+          cache: 'yarn'
       - name: Install dependencies
         run: |
           export YARN_ENABLE_HARDENED_MODE=1
-          yarn install --immutable --immutable-cache --check-resolutions
+          yarn install --immutable --check-cache --check-resolutions
       - name: Build assets
         run: yarn run build
       - name: Archive production artifacts
