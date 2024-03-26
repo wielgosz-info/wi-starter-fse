@@ -4,8 +4,12 @@
  * Slug: wi-starter-fse/loop-no-results-default
  * Categories: posts
  * Inserter: false
+ *
+ * @package WI\StarterFSE
  */
+
 ?>
+
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group"><!-- wp:pullquote -->
 	<figure class="wp-block-pullquote">

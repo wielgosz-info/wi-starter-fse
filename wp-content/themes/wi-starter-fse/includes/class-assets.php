@@ -1,4 +1,9 @@
 <?php
+/**
+ * Theme assets
+ *
+ * @package WI\StarterFSE
+ */
 
 namespace WI\StarterFSE;
 
@@ -17,14 +22,14 @@ class Assets {
 		Vite\enqueue_asset(
 			$this->dist_dir,
 			'src/scripts/main.ts',
-			[
+			array(
 				'handle' => 'wi-starter-fse-main',
 				'dependencies' => [], // Optional script dependencies. Defaults to empty array.
 				'css-dependencies' => [], // Optional style dependencies. Defaults to empty array.
 				'css-media' => 'all', // Optional.
 				'css-only' => true, // Optional. Set to true to only load style assets in production mode.
 				'in-footer' => true, // Optional. Defaults to false.
-			]
+			),
 		);
 	}
 }

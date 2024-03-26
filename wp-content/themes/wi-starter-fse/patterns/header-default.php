@@ -3,8 +3,12 @@
  * Title: Default Header
  * Slug: wi-starter-fse/header-default
  * Categories: header
+ *
+ * @package WI\StarterFSE
  */
+
 ?>
+
 <!-- wp:group {"layout":{"type":"constrained"}} -->
 <div class="wp-block-group">
 	<!-- wp:group {"align":"wide","layout":{"type":"flex","justifyContent":"space-between","flexWrap":"wrap"}} -->

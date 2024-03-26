@@ -1,4 +1,9 @@
 <?php
+/**
+ * Theme settings and features
+ *
+ * @package WI\StarterFSE
+ */
 
 namespace WI\StarterFSE;
 
@@ -14,7 +19,7 @@ class Theme {
 			'area_tag' => 'section',
 			'label' => __( 'Loop', 'wi-starter-fse' ),
 			'description' => __( 'Posts loop section', 'wi-starter-fse' ),
-			'icon' => 'layout'
+			'icon' => 'layout',
 		);
 
 		return $areas;

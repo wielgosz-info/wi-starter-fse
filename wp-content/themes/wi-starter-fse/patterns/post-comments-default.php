@@ -3,8 +3,12 @@
  * Title: Default Post Comments
  * Slug: wi-starter-fse/post-comments-default
  * Categories: posts
+ *
+ * @package WI\StarterFSE
  */
+
 ?>
+
 <!-- wp:group {"layout":{"type":"constrained"},"metadata":{"name":"Comments"}} -->
 <div class="wp-block-group">
 	<!-- wp:comments -->

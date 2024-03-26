@@ -5,8 +5,12 @@
  * Categories: posts
  * Inserter: false
  * Viewport Width: 420
+ *
+ * @package WI\StarterFSE
  */
+
 ?>
+
 <!-- wp:group {"tagName":"article","layout":{"type":"flex","flexWrap":"nowrap","orientation":"vertical"}} -->
 <article class="wp-block-group">
 	<!-- wp:post-featured-image {"isLink":true} /-->

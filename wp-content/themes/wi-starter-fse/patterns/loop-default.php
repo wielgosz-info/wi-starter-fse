@@ -3,7 +3,10 @@
  * Title: Default Post Loop
  * Slug: wi-starter-fse/loop-default
  * Categories: posts
+ *
+ * @package WI\StarterFSE
  */
+
 ?>
 
 <!-- wp:query {"query":{"perPage":6,"pages":"1","offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"","inherit":true},"enhancedPagination":true} -->

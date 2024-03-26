@@ -4,9 +4,9 @@
 	<description>WordPress project standards except Missing doc comment rules.</description>
 
 	<rule ref="WordPress">
-		<exclude name="Squiz.Commenting.FileComment.Missing"/>
 		<exclude name="Squiz.Commenting.ClassComment.Missing"/>
 		<exclude name="Squiz.Commenting.FunctionComment.Missing"/>
+		<exclude name="Squiz.Commenting.FunctionComment.MissingParamComment"/>
 	</rule>
 
 </ruleset>

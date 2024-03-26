@@ -1,4 +1,9 @@
 <?php
+/**
+ * Entrypoint for theme functions and definitions
+ *
+ * @package WI\StarterFSE
+ */
 
 // Load Composer dependencies.
 require_once __DIR__ . '/vendor/autoload.php';

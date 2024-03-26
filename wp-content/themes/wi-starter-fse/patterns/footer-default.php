@@ -3,8 +3,12 @@
  * Title: Default Footer
  * Slug: wi-starter-fse/footer-default
  * Categories: footer
+ *
+ * @package WI\StarterFSE
  */
+
 ?>
+
 <!-- wp:group {"align":"full","layout":{"type":"constrained"}} -->
 <div class="wp-block-group alignfull">
 	<!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->

@@ -1,4 +1,9 @@
 <?php
+/**
+ * Expose global styles when in development mode
+ *
+ * @package WI\StarterFSE
+ */
 
 namespace WI\StarterFSE\Dev;
 

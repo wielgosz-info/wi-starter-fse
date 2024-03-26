@@ -1,4 +1,9 @@
 <?php
+/**
+ * Expose appearance tools when in development mode
+ *
+ * @package WI\StarterFSE
+ */
 
 namespace WI\StarterFSE\Dev;
 
@@ -24,7 +29,7 @@ class AppearanceTools {
 					'color' => true,
 					'radius' => true,
 					'width' => true,
-					'style' => true
+					'style' => true,
 				),
 				'color' => array(
 					'background' => true,
@@ -36,22 +41,22 @@ class AppearanceTools {
 				),
 				'background' => array(
 					'backgroundImage' => true,
-					'backgroundSize' => true
+					'backgroundSize' => true,
 				),
 				'dimensions' => array(
 					'aspectRatio' => true,
-					'minHeight' => true
+					'minHeight' => true,
 				),
 				'layout' => array(
 					'allowEditing' => true,
-					'allowCustomContentAndWideSize' => true
+					'allowCustomContentAndWideSize' => true,
 				),
 				'lightbox' => array(
 					'enabled' => true,
-					'allowEditing' => true
+					'allowEditing' => true,
 				),
 				'position' => array(
-					'sticky' => true
+					'sticky' => true,
 				),
 				'spacing' => array(
 					'blockGap' => true,
@@ -70,8 +75,8 @@ class AppearanceTools {
 					'writingMode' => true,
 					'textTransform' => true,
 					'dropCap' => true,
-				)
-			)
+				),
+			),
 		);
 
 		return $theme_json->update_with( $appearance_tools );

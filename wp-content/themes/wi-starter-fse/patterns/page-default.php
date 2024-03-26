@@ -3,8 +3,12 @@
  * Title: Default Page
  * Slug: wi-starter-fse/page-default
  * Categories: posts
+ *
+ * @package WI\StarterFSE
  */
+
 ?>
+
 <!-- wp:group {"tagName":"article","align":"wide","layout":{"type":"constrained"},"metadata":{"name":"Article"}} -->
 <article class="wp-block-group alignwide">
 	<!-- wp:group {"layout":{"type":"constrained"}} -->
