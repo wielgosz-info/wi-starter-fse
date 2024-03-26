@@ -47,6 +47,7 @@ The simplest way is via "Attach Shell" VSCode context option 😉.
     ```sh
     wp plugin install query-monitor --activate
     wp plugin install wp-mail-logging --activate
+	wp plugin install theme-check --activate
     ```
 
 # Development

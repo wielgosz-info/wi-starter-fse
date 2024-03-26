@@ -162,6 +162,7 @@ dist
 /wp-content/plugins/wordpress-importer
 /wp-content/plugins/query-monitor
 /wp-content/plugins/wp-mail-logging
+/wp-content/plugins/theme-check
 
 /wp-content/themes/twentytwenty*
 
