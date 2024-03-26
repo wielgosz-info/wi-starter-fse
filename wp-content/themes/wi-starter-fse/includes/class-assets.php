@@ -4,19 +4,16 @@ namespace WI\StarterFSE;
 
 use Kucrut\Vite;
 
-class Assets
-{
+class Assets {
 	private string $dist_dir;
 
-	public function __construct()
-	{
+	public function __construct() {
 		$this->dist_dir = get_template_directory() . '/dist';
 
-		add_action('wp_enqueue_scripts', array($this, 'enqueueAssets'));
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueueAssets' ) );
 	}
 
-	public function enqueueAssets(): void
-	{
+	public function enqueueAssets(): void {
 		Vite\enqueue_asset(
 			$this->dist_dir,
 			'src/scripts/main.ts',

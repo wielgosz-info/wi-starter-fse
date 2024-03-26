@@ -9,5 +9,6 @@
 	"cssVariables.lookupFiles": [
 		"src/styles/**/*.css",
 		"wp-content/themes/wi-starter-fse/global-styles.css"
-	]
+	],
+	"php.format.codeStyle": "WordPress"
 }

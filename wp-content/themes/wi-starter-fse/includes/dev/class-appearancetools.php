@@ -2,11 +2,9 @@
 
 namespace WI\StarterFSE\Dev;
 
-class AppearanceTools
-{
-	public function __construct()
-	{
-		add_filter('wp_theme_json_data_theme', array($this, 'enableAllAppearanceTools'));
+class AppearanceTools {
+	public function __construct() {
+		add_filter( 'wp_theme_json_data_theme', array( $this, 'enableAllAppearanceTools' ) );
 	}
 
 	/**
@@ -19,8 +17,7 @@ class AppearanceTools
 	 *
 	 * @return \WP_Theme_JSON_Data
 	 */
-	public function enableAllAppearanceTools($theme_json)
-	{
+	public function enableAllAppearanceTools( $theme_json ) {
 		$appearance_tools = [
 			"settings" => [
 				"border" => [
@@ -57,11 +54,11 @@ class AppearanceTools
 					"sticky" => true
 				],
 				"spacing" => [
-					"blockGap" => true,
-					"margin" => true,
-					"padding" => true,
-					"customSpacingSize" => true,
-				],
+						"blockGap" => true,
+						"margin" => true,
+						"padding" => true,
+						"customSpacingSize" => true,
+					],
 				"typography" => [
 					"customFontSize" => true,
 					"fontStyle" => true,
@@ -77,6 +74,6 @@ class AppearanceTools
 			]
 		];
 
-		return $theme_json->update_with($appearance_tools);
+		return $theme_json->update_with( $appearance_tools );
 	}
 }

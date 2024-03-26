@@ -2,11 +2,9 @@
 
 namespace WI\StarterFSE\Dev;
 
-class GlobalStyles
-{
-	public function __construct()
-	{
-		add_action('wp_enqueue_scripts', array($this, 'exposeGlobalStyles'));
+class GlobalStyles {
+	public function __construct() {
+		add_action( 'wp_enqueue_scripts', array( $this, 'exposeGlobalStyles' ) );
 	}
 
 	/**
@@ -18,11 +16,10 @@ class GlobalStyles
 	 *
 	 * @return void
 	 */
-	public function exposeGlobalStyles()
-	{
+	public function exposeGlobalStyles() {
 		$stylesheet = wp_get_global_stylesheet();
 		$filename = get_template_directory() . '/global-styles.css';
 
-		file_put_contents($filename, $stylesheet);
+		file_put_contents( $filename, $stylesheet );
 	}
 }
