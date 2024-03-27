@@ -31,4 +31,4 @@ for file in ${files[@]}; do
 done
 
 # Rename the theme directory
-mv wp-content/themes/${ORIGINAL_THEME_SLUG} wp-content/themes/${THEME_SLUG}
+mv -T wp-content/themes/${ORIGINAL_THEME_SLUG} wp-content/themes/${THEME_SLUG}
