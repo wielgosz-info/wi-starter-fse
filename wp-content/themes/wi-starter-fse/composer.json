@@ -6,7 +6,7 @@
 	"license": "MIT",
 	"authors": [
 		{
-			"name": "Urszula Wielgosz"
+			"name": "Wielgosz Development"
 		}
 	],
 	"require": {
@@ -21,8 +21,6 @@
 		}
 	},
 	"autoload": {
-		"psr-4": {
-			"WI\\StarterFSE\\": "includes/"
-		}
+		"classmap": ["includes"]
 	}
 }

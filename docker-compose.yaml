@@ -21,6 +21,9 @@ services:
     volumes: &volumes
       - wordpress_data:/var/www/html
       - ./custom.ini:/usr/local/etc/php/conf.d/custom.ini
+      - ./composer.json:/var/www/html/composer.json
+      - ./composer.lock:/var/www/html/composer.lock
+      - ./vendor:/var/www/html/vendor/
       - ./wp-content/themes:/var/www/html/wp-content/themes/
       - ./wp-content/plugins:/var/www/html/wp-content/plugins/
       - ./wp-content/uploads:/var/www/html/wp-content/uploads/
@@ -63,6 +66,8 @@ services:
     environment:
       THEME_NAME: ${THEME_NAME:-'WI Starter FSE'}
       THEME_SLUG: ${THEME_SLUG:-wi-starter-fse}
+      THEME_NAMESPACE: ${THEME_NAMESPACE:-WI\\StarterFSE}
+      THEME_USE_TEST_DATA: ${THEME_USE_TEST_DATA:-false}
       WP_ADMIN_USER: ${WP_ADMIN_USER:-admin}
       WP_ADMIN_PASSWORD: ${WP_ADMIN_PASSWORD:-admin_password}
       WP_VIRTUAL_HOST: ${WP_VIRTUAL_HOST}

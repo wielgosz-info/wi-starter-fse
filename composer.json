@@ -1,0 +1,46 @@
+{
+	"name": "wielgosz-info/wi-starter-fse-project",
+	"description": "Starting point for container-based WP development with custom FSE theme.",
+	"version": "1.0.0",
+	"type": "project",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Wielgosz Development"
+		}
+	],
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org",
+			"only": [
+				"wpackagist-plugin/*",
+				"wpackagist-theme/*"
+			]
+		}
+	],
+	"extra": {
+		"installer-paths": {
+			"wp-content/mu-plugins/{$name}/": [
+				"type:wordpress-muplugin"
+			],
+			"wp-content/plugins/{$name}/": [
+				"type:wordpress-plugin"
+			],
+			"wp-content/themes/{$name}/": [
+				"type:wordpress-theme"
+			]
+		}
+	},
+	"require-dev": {
+		"wpackagist-plugin/wordpress-importer": "^0.8.2",
+		"wpackagist-plugin/query-monitor": "^3.15",
+		"wpackagist-plugin/wp-mail-logging": "^1.12",
+		"wpackagist-plugin/theme-check": "20231220"
+	},
+	"config": {
+		"allow-plugins": {
+			"composer/installers": true
+		}
+	}
+}
