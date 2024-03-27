@@ -19,6 +19,8 @@
 		"eslint-scope": "^8.0.0",
 		"husky": "^8.0.0",
 		"lint-staged": "^15.2.2",
+		"postcss": "^8.4.38",
+		"postcss-custom-media": "^10.0.4",
 		"prettier": "^3.2.5",
 		"stylelint": "^14.5.1",
 		"typescript": "^5.4.2",
