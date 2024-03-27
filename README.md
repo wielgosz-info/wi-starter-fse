@@ -26,7 +26,10 @@ docker compose -f docker-compose.proxy.yaml up -d --build
    Additionally, `$THEME_USE_TEST_DATA` can be set to true to import standard WP Theme test data from
    https://github.com/WordPress/theme-test-data/blob/master/themeunittestdata.wordpress.xml.
 
-2. Prepare dockers:
+2. Run `./setup.sh` to replace name/slug/namespace used by template with your own.
+   Remember to escape backslashes in `$THEME_NAMESPACE`!
+
+3. Prepare dockers:
 
     ```sh
     docker compose --profile cli -f docker-compose.yaml up -d --build

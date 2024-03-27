@@ -13,7 +13,8 @@
 		"devsense.phptools-vscode",
 		"editorconfig.editorconfig",
 		"stylelint.vscode-stylelint",
-		"vunguyentuan.vscode-css-variables"
+		"vunguyentuan.vscode-css-variables",
+		"github.vscode-github-actions"
 	],
 	// List of extensions recommended by VS Code that should not be recommended for users of this workspace.
 	"unwantedRecommendations": []

@@ -1,7 +1,7 @@
 {
 	"name": "wi-starter-fse",
 	"version": "1.0.0",
-	"author": "Wielgosz Development",
+	"author": "Urszula Wielgosz",
 	"description": "WI Starter FSE WP Theme",
 	"scripts": {
 		"build": "vite build",
