@@ -45,6 +45,7 @@ docker compose -f docker-compose.yaml up -d --build
 
 The whole development should be done inside the container.
 To connect to the container use Attach Visual Studio Code context menu option.
+Open `/usr/local/app` folder.
 Inside, run in the Terminal (or Run Task...)
 
 ```sh
