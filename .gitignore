@@ -156,15 +156,16 @@ dist
 # End of https://www.toptal.com/developers/gitignore/api/node
 
 # Extra WP theme development ignores
+/vendor
+
 /wp-content/upgrade
 /wp-content/uploads
 
-/wp-content/plugins/wordpress-importer
-/wp-content/plugins/query-monitor
-/wp-content/plugins/wp-mail-logging
-/wp-content/plugins/theme-check
+!/wp-content/plugins/
+/wp-content/plugins/*
 
-/wp-content/themes/twentytwenty*
-
+!/wp-content/themes/
+/wp-content/themes/*
+!/wp-content/themes/wi-starter-fse
 /wp-content/themes/wi-starter-fse/vendor
 /wp-content/themes/wi-starter-fse/global-styles.css
