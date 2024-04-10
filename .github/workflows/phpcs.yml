@@ -1,6 +1,12 @@
-name: WPCS check
+name: WPCS
 
-on: pull_request
+on:
+  push:
+    branches:
+      - main
+      - master
+      - staging
+      - develop
 
 jobs:
   phpcs:

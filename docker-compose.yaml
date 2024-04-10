@@ -1,117 +1,26 @@
 version: '3.9'
 
 services:
-  db:
-    image: mysql:5.7
-    volumes:
-      - db_data:/var/lib/mysql
-    restart: always
-    environment:
-      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root_password}
-      MYSQL_DATABASE: ${MYSQL_DATABASE:-wordpress}
-      MYSQL_USER: ${MYSQL_USER:-wordpress}
-      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
-
-  wordpress:
-    depends_on:
-      - db
-    image: wordpress:php8.2
-    ports:
-      - ':80'
-    volumes: &volumes
-      - wordpress_data:/var/www/html
-      - ./custom.ini:/usr/local/etc/php/conf.d/custom.ini
-      - ./composer.json:/var/www/html/composer.json
-      - ./composer.lock:/var/www/html/composer.lock
-      - ./vendor:/var/www/html/vendor/
-      - ./wp-content/themes:/var/www/html/wp-content/themes/
-      - ./wp-content/plugins:/var/www/html/wp-content/plugins/
-      - ./wp-content/uploads:/var/www/html/wp-content/uploads/
-      - ./wp-content/upgrade:/var/www/html/wp-content/upgrade/
-    restart: always
-    environment:
-      VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
-      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
-      WORDPRESS_DB_NAME: ${MYSQL_DATABASE:-wordpress}
-      WORDPRESS_TABLE_PREFIX: ${WP_TABLE_PREFIX:-wp_}
-      WORDPRESS_DEBUG: 1
-      WORDPRESS_CONFIG_EXTRA: |
-        define('WP_SITEURL', 'http://${WP_VIRTUAL_HOST}');
-        define('WP_HOME', 'http://${WP_VIRTUAL_HOST}');
-
-        define('WP_DEBUG_DISPLAY' , true);
-        define('WP_DEVELOPMENT_MODE', '${WP_DEVELOPMENT_MODE}');
-        define('WP_ENVIRONMENT_TYPE', '${WP_ENVIRONMENT_TYPE}');
-        define('DISALLOW_FILE_EDIT', true);
-        ini_set('display_errors', 'On');
-        ini_set('error_reporting', E_ALL );
-    networks:
-      proxy: {}
-      default:
-        aliases:
-          - ${WP_VIRTUAL_HOST}
-
-  cli:
-    # WP CLI + Composer
-    depends_on:
-      - wordpress
-    image: ${THEME_SLUG:-wi-starter-fse}-cli:latest
-    build:
-      context: .
-      dockerfile: Dockerfile.cli
-    command: ['/bin/sh', '-c', "while true; do sleep 1000; done"]
-    volumes: *volumes
-    environment:
-      THEME_NAME: ${THEME_NAME:-'WI Starter FSE'}
-      THEME_SLUG: ${THEME_SLUG:-wi-starter-fse}
-      THEME_NAMESPACE: ${THEME_NAMESPACE:-WI\\StarterFSE}
-      THEME_USE_TEST_DATA: ${THEME_USE_TEST_DATA:-false}
-      WP_ADMIN_USER: ${WP_ADMIN_USER:-admin}
-      WP_ADMIN_PASSWORD: ${WP_ADMIN_PASSWORD:-admin_password}
-      WP_VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
-      WP_LOCALE: ${WP_LOCALE:-en_US}
-      WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: ${MYSQL_USER:-wordpress}
-      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD:-wordpress}
-      WORDPRESS_DB_NAME: ${MYSQL_DATABASE:-wordpress}
-      WORDPRESS_TABLE_PREFIX: ${WP_TABLE_PREFIX:-wp_}
-      WORDPRESS_CONFIG_EXTRA: |
-        define('WP_SITEURL', 'http://${WP_VIRTUAL_HOST}');
-        define('WP_HOME', 'http://${WP_VIRTUAL_HOST}');
-    profiles:
-      - cli
-
   theme:
-    depends_on:
-      - wordpress
-    image: ${THEME_SLUG:-wi-starter-fse}-theme:latest
+    image: wielgosz-info/${THEME_SLUG:-wi-starter-fse}-theme:latest
     build:
       context: .
-      dockerfile: Dockerfile.theme
+      dockerfile: Dockerfile
     volumes:
       - ./:/usr/local/app
       - node_modules:/usr/local/app/node_modules
       - vscode:/root/.vscode-server
     restart: always
     environment:
-      WP_VIRTUAL_HOST: ${WP_VIRTUAL_HOST}
-      THEME_NAME: ${THEME_NAME:-'WI Starter FSE'}
+      THEME_NAME: ${THEME_NAME:-'WI Sonx FSE'}
       THEME_SLUG: ${THEME_SLUG:-wi-starter-fse}
     secrets:
       - user_ssh_key
 
 volumes:
-  db_data: {}
-  wordpress_data: {}
   node_modules: {}
   vscode: {}
 
 secrets:
   user_ssh_key:
     file: ~/.ssh/id_rsa
-
-networks:
-  proxy:
-    external: true

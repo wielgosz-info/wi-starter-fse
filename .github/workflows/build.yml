@@ -1,4 +1,4 @@
-name: Build project
+name: Build
 
 on:
   push:
@@ -37,4 +37,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: theme-assets
-          path: wp-content/themes/${{ vars.THEME_SLUG }}/dist
+          path: ./build

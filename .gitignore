@@ -157,15 +157,10 @@ dist
 
 # Extra WP theme development ignores
 /vendor
+global-styles.css
 
-/wp-content/upgrade
-/wp-content/uploads
+# Development overrides
+docker-compose.override.yaml
 
-!/wp-content/plugins/
-/wp-content/plugins/*
-
-!/wp-content/themes/
-/wp-content/themes/*
-!/wp-content/themes/wi-starter-fse
-/wp-content/themes/wi-starter-fse/vendor
-/wp-content/themes/wi-starter-fse/global-styles.css
+# Build files
+build

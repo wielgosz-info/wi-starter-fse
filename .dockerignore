@@ -2,5 +2,4 @@
 *
 
 # Aside from the following files
-!docker-entrypoint.theme.sh
-!docker-entrypoint.cli.sh
+!docker-entrypoint.sh
