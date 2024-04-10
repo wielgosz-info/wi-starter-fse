@@ -2,12 +2,12 @@
 /**
  * Expose global styles when in development mode
  *
- * @package WI\StarterFSE
+ * @package WI\SonxFSE
  */
 
-namespace WI\StarterFSE\Dev;
+namespace WI\SonxFSE\Dev;
 
-class GlobalStyles {
+class GlobalStyles extends \WI\SonxFSE\Utils\Singleton {
 	public function __construct() {
 		add_action( 'wp_enqueue_scripts', array( $this, 'expose_global_styles' ) );
 	}
@@ -22,9 +22,11 @@ class GlobalStyles {
 	 * @return void
 	 */
 	public function expose_global_styles() {
-		$stylesheet = wp_get_global_stylesheet();
-		$filename = get_template_directory() . '/global-styles.css';
+		global $wp_filesystem;
 
-		file_put_contents( $filename, $stylesheet );
+		$stylesheet = wp_get_global_stylesheet();
+		$filename   = get_template_directory() . '/global-styles.css';
+
+		$wp_filesystem->put_contents( $filename, $stylesheet );
 	}
 }
